@@ -83,7 +83,7 @@ class VaspCustodianTask(FireTaskBase):
         if self["handlers"] == "all":
             hnames = ["VaspErrorHandler", "MeshSymmetryErrorHandler",
                       "UnconvergedErrorHandler", "NonConvergingErrorHandler",
-                      "PotimErrorHandler", "PBSWalltimeHandler"]
+                      "PotimErrorHandler"]
         else:
             hnames = self["handlers"]
         handlers = [load_class("custodian.vasp.handlers", n) for n in hnames]
