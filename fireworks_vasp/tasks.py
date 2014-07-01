@@ -31,8 +31,11 @@ class WriteVaspInputTask(FireTaskBase):
 
     Optional params:
         input_set_params (dict): If the input set requires some additional
-            parameters, specify them using input_set_params. E.g.,
-            {"user_incar_settings": ...}.
+            parameters, specify them using input_set_params. Note that if you
+            want to change the user_incar_settings, you need to provide
+            {"input_set_params": {"user_incar_settings": ...}}. This is
+            because input_set_params caters to not just user_incar_settings,
+            but all other potential args to the input set.
     """
 
     required_params = ["structure", "vasp_input_set"]
