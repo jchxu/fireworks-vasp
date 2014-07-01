@@ -43,7 +43,7 @@ class WriteVaspInputTask(FireTaskBase):
         mod = __import__("pymatgen.io.vaspio_set", globals(), locals(),
                          [self["vasp_input_set"]], -1)
         vis = load_class("pymatgen.io.vaspio_set", self["vasp_input_set"])(
-            user_incar_settings=self.get("input_set_params", {}))
+            **self.get("input_set_params", {}))
         vis.write_input(s, ".")
 
 
