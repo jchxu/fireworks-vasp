@@ -89,7 +89,7 @@ class VaspCustodianTask(FireTaskBase):
                       "PotimErrorHandler"]
         else:
             hnames = self["handlers"]
-        handlers = [load_class("custodian.vasp.handlers", n) for n in hnames]
+        handlers = [load_class("custodian.vasp.handlers", n)() for n in hnames]
         c = Custodian(handlers, [job], **self.get("custodian_params", {}))
         output = c.run()
         return FWAction(stored_data=output)
