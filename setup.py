@@ -13,7 +13,7 @@ import os
 if __name__ == "__main__":
     setup(
         name='fireworks-vasp',
-        version='0.1',
+        version='0.2',
         description='VASP Plugin for fireworks',
         long_description='VASP Plugin for fireworks',
         url='https://github.com/materialsproject/fireworks',

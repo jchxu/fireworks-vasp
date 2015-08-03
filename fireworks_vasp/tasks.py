@@ -10,7 +10,7 @@ from pymatgen import Structure
 from fireworks import FireTaskBase, FWAction, explicit_serialize
 from custodian import Custodian
 from custodian.vasp.jobs import VaspJob
-from pymatgen.io.vaspio import Vasprun
+from pymatgen.io.vasp import Vasprun
 
 
 def load_class(mod, name):
