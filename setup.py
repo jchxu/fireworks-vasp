@@ -2,10 +2,10 @@
 
 __author__ = "Shyue Ping Ong"
 __copyright__ = "Copyright 2013, The Materials Virtual Lab"
-__version__ = "0.1"
+__version__ = "0.2"
 __maintainer__ = "Shyue Ping Ong"
 __email__ = "ongsp@ucsd.edu"
-__date__ = "Jan 31, 2014"
+__date__ = "Aug 3, 2015"
 
 from setuptools import setup, find_packages
 import os
